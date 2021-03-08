@@ -22,9 +22,9 @@ jobs:
         python-version: 3.9
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.1.5
-    - run: npm install ganache-cli
     - name: Install dependencies
       run: |
+        npm install ganache-cli
         python3 -m pip install --user pipx
         python3 -m pipx ensurepath
         pipx install eth-brownie
